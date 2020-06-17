@@ -1,0 +1,4 @@
+
+Warnings: 
+
+File: C:\Users\USER\Desktop\Farneback_blockRAM\blockram_v2\PolyExp_pipeline1.m, line : 21, column : 11. Function 'double' not supported for fixed-point conversion.
