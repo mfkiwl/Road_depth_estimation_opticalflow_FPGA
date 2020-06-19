@@ -1,0 +1,5 @@
+
+Warnings: 
+
+File: C:\Users\USER\Desktop\Farneback_blockRAM\blockram_v2\PolyExp_pipeline2.m, line : 80, column : 10. The expression 'srow_0 = 0.0' was not executed during simulation. Consider using a more thorough testbench.
+File: C:\Users\USER\Desktop\Farneback_blockRAM\blockram_v2\PolyExp_pipeline2.m, line : 81, column : 10. The expression 'srow_1 = 0.0' was not executed during simulation. Consider using a more thorough testbench.

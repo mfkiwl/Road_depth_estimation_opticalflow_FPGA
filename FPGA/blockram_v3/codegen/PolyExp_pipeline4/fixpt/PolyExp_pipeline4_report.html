@@ -1,0 +1,504 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fixed-Point Report for PolyExp_pipeline4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+	body { font-family: monospace; }
+	h2 { font-family: Arial, Helvetica, sans-serif; color: #990000; margin-top: 50px; }
+	table,th,td { border: 1px solid black; }
+	table { margin-top: 30px; }
+	th { align: center; font-weight: bold; }
+	tr.h { background-color: #99CCFF; }
+	tr.a { background-color: #EEEEFF; }
+	tr.b { background-color: #FFFFFF; }
+	tr.c { background-color: #FFA500; }
+	tr.a td, tr.b td { border-style: none; }
+	td.left { text-align: left; }
+	td.right { text-align: right; }
+	td.center { text-align: center; }
+	td.bold { font-weight: bold; }
+	pre { padding: 0px; margin: 0px; }
+	span { font-style: italic; }
+	.code, .code tr, .code th, .code td { border: none; border-collapse: collapse; }
+	.padd { padding-left: 5px; }
+	td.cov, th.cov { width: 50px; height: 20px; text-align: center; font-weight: bold; border-right: 2px solid black; cell-spacing: 0px; }
+	td.cov { vertical-align: top; }
+	td.black { color: #000000; font-weight: bold; padding-top: 4px; }
+	td.white { color: #FFFFFF; font-weight: bold; padding-top: 4px; }
+	.code th { font-weight: bold; border-bottom: 2px solid black; }
+</style>
+</head>
+<body>
+<h3>Generated on  2020-06-19 13:27:52</h3>
+<p>The following table shows fixed point instrumentation results</p>
+<h2>Fixed-Point Report <span>PolyExp_pipeline4<span></h2>
+<TABLE class="code">
+<TR>
+<TH class="cov padd">Simulation Coverage</TH>
+<TH>Code</TH>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>function [drow_1,drow_2,drow_3,drow_4,drow_5] = PolyExp_pipeline4(data_in_0,data_in_1,data_in_2)
+%--------------------------------------------								
+n = 8;			
+width  = 200;
+%--------------------------------------------
+g    = zeros(1,n*6 + 3 + n);
+xg   = zeros(1,n*6 + 3 + n + n*2 + 1);
+xxg  = zeros(1,n*6 + 3 + n + n*2 + 1 + n*2 + 1);
+%--------------------------------------------
+persistent rRam1 rRam2 rRam3 ctr;
+</pre></TD>
+</TR>
+<TR>
+<TD class="cov black" style="background-color: rgb(255,160,118);">Once</TD>
+<TD class="padd"><pre>if isempty(ctr)
+	ctr = uint8(1);
+end
+if isempty(rRam1)
+	rRam1 = zeros(1,width);
+end</pre></TD>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>		
+</pre></TD>
+</TR>
+<TR>
+<TD class="cov black" style="background-color: rgb(255,160,118);">Once</TD>
+<TD class="padd"><pre>if isempty(rRam2)
+	rRam2 = zeros(1,width);
+end</pre></TD>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>	
+</pre></TD>
+</TR>
+<TR>
+<TD class="cov black" style="background-color: rgb(255,160,118);">Once</TD>
+<TD class="padd"><pre>if isempty(rRam3)
+	rRam3 = zeros(1,width);
+end</pre></TD>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>		
+%----------------------
+g(1, 1) = 7.425750567660737e-11;  xg(1, 1) = -5.940600454128590e-10; xxg(1, 1) = 4.752480363302872e-09;
+g(1, 2) = 1.357346656654903e-08;  xg(1, 2) = -9.501426596584319e-08; xxg(1, 2) = 6.650998617609023e-07;
+g(1, 3) = 1.238932971502896e-06;  xg(1, 3) = -7.433597829017376e-06; xxg(1, 3) = 4.460158697410425e-05;
+g(1, 4) = 5.646917756715771e-05;  xg(1, 4) = -2.823458878357885e-04; xxg(1, 4) = 0.001411729439179;
+g(1, 5) = 0.001285225836022;      xg(1, 5) = -0.005140903344087;     xxg(1, 5) = 0.020563613376348;
+g(1, 6) = 0.014606906292119;      xg(1, 6) = -0.043820718876357;     xxg(1, 6) = 0.131462156629071;
+g(1, 7) = 0.082897614969052;      xg(1, 7) = -0.165795229938103;     xxg(1, 7) = 0.331590459876207;
+g(1, 8) = 0.234926576512800;      xg(1, 8) = -0.234926576512800;     xxg(1, 8) = 0.234926576512800;
+g(1, 9) = 0.332451909263490;      xg(1, 9) = 0.0;                    xxg(1, 9) = 0.0;
+g(1,10) = 0.234926576512800;      xg(1,10) = 0.234926576512800;      xxg(1,10) = 0.234926576512800;
+g(1,11) = 0.082897614969052;      xg(1,11) = 0.165795229938103;      xxg(1,11) = 0.331590459876207;
+g(1,12) = 0.014606906292119;      xg(1,12) = 0.043820718876357;      xxg(1,12) = 0.131462156629071;
+g(1,13) = 0.001285225836022;      xg(1,13) = 0.005140903344087;      xxg(1,13) = 0.020563613376348;
+g(1,14) = 5.646917756715771e-05;  xg(1,14) = 2.823458878357885e-04;  xxg(1,14) = 0.001411729439179;
+g(1,15) = 1.238932971502896e-06;  xg(1,15) = 7.433597829017376e-06;  xxg(1,15) = 4.460158697410425e-05;
+g(1,16) = 1.357346656654903e-08;  xg(1,16) = 9.501426596584319e-08;  xxg(1,16) = 6.650998617609023e-07;
+g(1,17) = 7.425750567660737e-11;  xg(1,17) = 5.940600454128590e-10;  xxg(1,17) = 4.752480363302872e-09;
+ig11 = 0.6944; ig03 = -0.3472; ig33 = 0.2411; ig55 = 0.4823;
+%----------------------
+BRAM_in_1 = data_in_0;
+BRAM_in_2 = data_in_1;
+BRAM_in_3 = data_in_2;
+%---------------------- write BRAM
+writeData_1 = BRAM_in_1;
+writeData_2 = BRAM_in_2;
+writeData_3 = BRAM_in_3;
+rRam1(ctr) = writeData_1;
+rRam2(ctr) = writeData_2;
+rRam3(ctr) = writeData_3;
+%---------------------- read BRAM
+readData_1 = rRam1(ctr);
+readData_2 = rRam2(ctr);
+readData_3 = rRam3(ctr);
+BRAM_out_1 = readData_1;
+BRAM_out_2 = readData_2;
+BRAM_out_3 = readData_3;
+%----------------------
+inb1 = BRAM_out_1*g(1, 9);
+inb2 = 0.0;
+inb3 = BRAM_out_2*g(1, 9);
+inb4 = 0.0;
+inb5 = BRAM_out_3*g(1, 9);
+inb6 = 0.0;
+%----------------------
+rRam1_P_1 = rRam1(min(ctr+1,200));
+rRam1_P_2 = rRam1(min(ctr+2,200));
+rRam1_P_3 = rRam1(min(ctr+3,200));
+rRam1_P_4 = rRam1(min(ctr+4,200));
+rRam1_P_5 = rRam1(min(ctr+5,200));
+rRam1_P_6 = rRam1(min(ctr+6,200));
+rRam1_P_7 = rRam1(min(ctr+7,200));
+rRam1_P_8 = rRam1(min(ctr+8,200));
+rRam1_N_1 = rRam1(max(ctr-1,1));
+rRam1_N_2 = rRam1(max(ctr-2,1));
+rRam1_N_3 = rRam1(max(ctr-3,1));
+rRam1_N_4 = rRam1(max(ctr-4,1));
+rRam1_N_5 = rRam1(max(ctr-5,1));
+rRam1_N_6 = rRam1(max(ctr-6,1));
+rRam1_N_7 = rRam1(max(ctr-7,1));
+rRam1_N_8 = rRam1(max(ctr-8,1));
+%----------------------
+rRam2_P_1 = rRam2(min(ctr+1,200));
+rRam2_P_2 = rRam2(min(ctr+2,200));
+rRam2_P_3 = rRam2(min(ctr+3,200));
+rRam2_P_4 = rRam2(min(ctr+4,200));
+rRam2_P_5 = rRam2(min(ctr+5,200));
+rRam2_P_6 = rRam2(min(ctr+6,200));
+rRam2_P_7 = rRam2(min(ctr+7,200));
+rRam2_P_8 = rRam2(min(ctr+8,200));
+rRam2_N_1 = rRam2(max(ctr-1,1));
+rRam2_N_2 = rRam2(max(ctr-2,1));
+rRam2_N_3 = rRam2(max(ctr-3,1));
+rRam2_N_4 = rRam2(max(ctr-4,1));
+rRam2_N_5 = rRam2(max(ctr-5,1));
+rRam2_N_6 = rRam2(max(ctr-6,1));
+rRam2_N_7 = rRam2(max(ctr-7,1));
+rRam2_N_8 = rRam2(max(ctr-8,1));
+%----------------------
+rRam3_P_1 = rRam3(min(ctr+1,200));
+rRam3_P_2 = rRam3(min(ctr+2,200));
+rRam3_P_3 = rRam3(min(ctr+3,200));
+rRam3_P_4 = rRam3(min(ctr+4,200));
+rRam3_P_5 = rRam3(min(ctr+5,200));
+rRam3_P_6 = rRam3(min(ctr+6,200));
+rRam3_P_7 = rRam3(min(ctr+7,200));
+rRam3_P_8 = rRam3(min(ctr+8,200));
+rRam3_N_1 = rRam3(max(ctr-1,1));
+rRam3_N_2 = rRam3(max(ctr-2,1));
+rRam3_N_3 = rRam3(max(ctr-3,1));
+rRam3_N_4 = rRam3(max(ctr-4,1));
+rRam3_N_5 = rRam3(max(ctr-5,1));
+rRam3_N_6 = rRam3(max(ctr-6,1));
+rRam3_N_7 = rRam3(max(ctr-7,1));
+rRam3_N_8 = rRam3(max(ctr-8,1));
+%----------------------
+inb1_P = 0;
+inb1_N = 0;
+inb2_P = 0;
+inb2_N = 0;
+inb3_P = 0;
+inb3_N = 0;
+for k = 1: n
+	if k == 1
+		inb1_P = rRam1_P_1;
+		inb1_N = rRam1_N_1;
+		inb2_P = rRam2_P_1;
+		inb2_N = rRam2_N_1;
+		inb3_P = rRam3_P_1;
+		inb3_N = rRam3_N_1;
+	elseif k == 2
+		inb1_P = rRam1_P_2;
+		inb1_N = rRam1_N_2;
+		inb2_P = rRam2_P_2;
+		inb2_N = rRam2_N_2;
+		inb3_P = rRam3_P_2;
+		inb3_N = rRam3_N_2;
+	elseif k == 3
+		inb1_P = rRam1_P_3;
+		inb1_N = rRam1_N_3;
+		inb2_P = rRam2_P_3;
+		inb2_N = rRam2_N_3;
+		inb3_P = rRam3_P_3;
+		inb3_N = rRam3_N_3;
+	elseif k == 4
+		inb1_P = rRam1_P_4;
+		inb1_N = rRam1_N_4;
+		inb2_P = rRam2_P_4;
+		inb2_N = rRam2_N_4;
+		inb3_P = rRam3_P_4;
+		inb3_N = rRam3_N_4;
+	elseif k == 5
+		inb1_P = rRam1_P_5;
+		inb1_N = rRam1_N_5;
+		inb2_P = rRam2_P_5;
+		inb2_N = rRam2_N_5;
+		inb3_P = rRam3_P_5;
+		inb3_N = rRam3_N_5;
+	elseif k == 6
+		inb1_P = rRam1_P_6;
+		inb1_N = rRam1_N_6;
+		inb2_P = rRam2_P_6;
+		inb2_N = rRam2_N_6;
+		inb3_P = rRam3_P_6;
+		inb3_N = rRam3_N_6;
+	elseif k == 7
+		inb1_P = rRam1_P_7;
+		inb1_N = rRam1_N_7;
+		inb2_P = rRam2_P_7;
+		inb2_N = rRam2_N_7;
+		inb3_P = rRam3_P_7;
+		inb3_N = rRam3_N_7;
+	elseif k == 8
+		inb1_P = rRam1_P_8;
+		inb1_N = rRam1_N_8;
+		inb2_P = rRam2_P_8;
+		inb2_N = rRam2_N_8;
+		inb3_P = rRam3_P_8;
+		inb3_N = rRam3_N_8;
+	end
+	
+	tg = inb1_P + inb1_N;
+	g0 = g(1,k+9);
+	outb1 = inb1 + tg * g0;
+	outb4 = inb4 + tg * xxg(1,k+9);
+	outb2 = inb2 + (inb1_P - inb1_N) * xg(1,k+9);
+	outb3 = inb3 + (inb2_P + inb2_N) * g0;
+	outb6 = inb6 + (inb2_P - inb2_N) * xg(1,k+9);
+	outb5 = inb5 + (inb3_P + inb3_N) * g0;
+	
+	inb1 = outb1;
+	inb2 = outb2;
+	inb3 = outb3;
+	inb4 = outb4;
+	inb5 = outb5;
+	inb6 = outb6;
+end
+
+outb1 = inb1;
+outb2 = inb2;
+outb3 = inb3;
+outb4 = inb4;
+outb5 = inb5;
+outb6 = inb6;
+%----------------------
+drow_1 = outb2*ig11;
+drow_2 = outb3*ig11;
+drow_3 = outb1*ig03 + outb4*ig33;
+drow_4 = outb1*ig03 + outb5*ig33;
+drow_5 = outb6*ig55;
+%---------------------- ctr counter
+</pre></TD>
+</TR>
+<TR>
+<TD class="cov black" style="background-color: rgb(233,241,227);">1%</TD>
+<TD class="padd"><pre>if ctr == uint8(200)
+	ctr = uint8(1);
+</pre></TD>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>else
+	ctr = ctr + 1;
+end
+%----------------------
+end</pre></TD>
+</TR>
+</TABLE>
+<TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th><th>Static Min</th><th>Static Max</th><th>Whole Number</th><th>ProposedType <BR /> (Best For WL = 14)</th></TR><TR class="a">
+<TD class="left">BRAM_in_1</TD><TD class="left">double</TD><TD class="right">2.681223180424949</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">BRAM_in_2</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">BRAM_in_3</TD><TD class="left">double</TD><TD class="right">7.268758521015007</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">BRAM_out_1</TD><TD class="left">double</TD><TD class="right">2.681223180424949</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">BRAM_out_2</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">BRAM_out_3</TD><TD class="left">double</TD><TD class="right">7.268758521015007</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">ctr</TD><TD class="left">uint8</TD><TD class="right">1</TD><TD class="right">200</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">data_in_0</TD><TD class="left">double</TD><TD class="right">2.681223180424949</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">data_in_1</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">data_in_2</TD><TD class="left">double</TD><TD class="right">7.268758521015007</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">drow_1</TD><TD class="left">double</TD><TD class="right">-69.24474997083666</TD><TD class="right">69.60371256515128</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">drow_2</TD><TD class="left">double</TD><TD class="right">-54.593130783425124</TD><TD class="right">58.424639011141664</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 7)</TD></TR>
+<TR class="a">
+<TD class="left">drow_3</TD><TD class="left">double</TD><TD class="right">-26.084534756765144</TD><TD class="right">21.427623343270767</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 8)</TD></TR>
+<TR class="b">
+<TD class="left">drow_4</TD><TD class="left">double</TD><TD class="right">-25.205404298787684</TD><TD class="right">16.455418501915418</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 8)</TD></TR>
+<TR class="a">
+<TD class="left">drow_5</TD><TD class="left">double</TD><TD class="right">-32.726304842503396</TD><TD class="right">32.69950221816741</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 7)</TD></TR>
+<TR class="b">
+<TD class="left">g</TD><TD class="left">double 1 x 59 </TD><TD class="right">0</TD><TD class="right">0.33245190926349</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 15)</TD></TR>
+<TR class="a">
+<TD class="left">g0</TD><TD class="left">double</TD><TD class="right">7.425750567660737e-11</TD><TD class="right">0.2349265765128</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 16)</TD></TR>
+<TR class="b">
+<TD class="left">ig03</TD><TD class="left">double</TD><TD class="right">-0.3472</TD><TD class="right">-0.3472</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 14)</TD></TR>
+<TR class="a">
+<TD class="left">ig11</TD><TD class="left">double</TD><TD class="right">0.6944</TD><TD class="right">0.6944</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 14)</TD></TR>
+<TR class="b">
+<TD class="left">ig33</TD><TD class="left">double</TD><TD class="right">0.2411</TD><TD class="right">0.2411</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 16)</TD></TR>
+<TR class="a">
+<TD class="left">ig55</TD><TD class="left">double</TD><TD class="right">0.4823</TD><TD class="right">0.4823</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 15)</TD></TR>
+<TR class="b">
+<TD class="left">inb1</TD><TD class="left">double</TD><TD class="right">0.8913777654938012</TD><TD class="right">251.7172000084624</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">inb1_N</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">inb1_P</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">inb2</TD><TD class="left">double</TD><TD class="right">-99.7188219626104</TD><TD class="right">100.23576118253352</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">inb2_N</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">inb2_P</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">inb3</TD><TD class="left">double</TD><TD class="right">-78.61913995308917</TD><TD class="right">84.13686493539986</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">inb3_N</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">inb3_P</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">inb4</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">360.44714693693993</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">inb5</TD><TD class="left">double</TD><TD class="right">2.4165126482867008</TD><TD class="right">362.09651634975614</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">inb6</TD><TD class="left">double</TD><TD class="right">-67.85466481962139</TD><TD class="right">67.79909230389262</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">k</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="a">
+<TD class="left">n</TD><TD class="left">double</TD><TD class="right">8</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="b">
+<TD class="left">outb1</TD><TD class="left">double</TD><TD class="right">5.6634973715163</TD><TD class="right">251.7172000084624</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">outb2</TD><TD class="left">double</TD><TD class="right">-99.7188219626104</TD><TD class="right">100.23576118253352</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">outb3</TD><TD class="left">double</TD><TD class="right">-78.61913995308917</TD><TD class="right">84.13686493539986</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">outb4</TD><TD class="left">double</TD><TD class="right">3.319802666795324</TD><TD class="right">360.44714693693993</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">outb5</TD><TD class="left">double</TD><TD class="right">8.997018629757452</TD><TD class="right">362.09651634975614</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">outb6</TD><TD class="left">double</TD><TD class="right">-67.85466481962139</TD><TD class="right">67.79909230389262</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam1</TD><TD class="left">double 1 x 200 </TD><TD class="right">0</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam1_N_1</TD><TD class="left">double</TD><TD class="right">2.681223180424949</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam1_N_2</TD><TD class="left">double</TD><TD class="right">2.681223180424949</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam1_N_3</TD><TD class="left">double</TD><TD class="right">2.681223180424949</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam1_N_4</TD><TD class="left">double</TD><TD class="right">2.681223180424949</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam1_N_5</TD><TD class="left">double</TD><TD class="right">2.681223180424949</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam1_N_6</TD><TD class="left">double</TD><TD class="right">5.244550006901941</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam1_N_7</TD><TD class="left">double</TD><TD class="right">5.244550006901941</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam1_N_8</TD><TD class="left">double</TD><TD class="right">5.244550006901941</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam1_P_1</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam1_P_2</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam1_P_3</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam1_P_4</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam1_P_5</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam1_P_6</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam1_P_7</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam1_P_8</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam2</TD><TD class="left">double 1 x 200 </TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam2_N_1</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam2_N_2</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam2_N_3</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam2_N_4</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam2_N_5</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam2_N_6</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam2_N_7</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam2_N_8</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam2_P_1</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam2_P_2</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam2_P_3</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam2_P_4</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam2_P_5</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam2_P_6</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam2_P_7</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">rRam2_P_8</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">rRam3</TD><TD class="left">double 1 x 200 </TD><TD class="right">0</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">rRam3_N_1</TD><TD class="left">double</TD><TD class="right">7.268758521015007</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">rRam3_N_2</TD><TD class="left">double</TD><TD class="right">7.268758521015007</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">rRam3_N_3</TD><TD class="left">double</TD><TD class="right">7.268758521015007</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">rRam3_N_4</TD><TD class="left">double</TD><TD class="right">7.268758521015007</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">rRam3_N_5</TD><TD class="left">double</TD><TD class="right">7.268758521015007</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">rRam3_N_6</TD><TD class="left">double</TD><TD class="right">11.5669534863381</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">rRam3_N_7</TD><TD class="left">double</TD><TD class="right">11.5669534863381</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">rRam3_N_8</TD><TD class="left">double</TD><TD class="right">11.5669534863381</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">rRam3_P_1</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">rRam3_P_2</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">rRam3_P_3</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">rRam3_P_4</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">rRam3_P_5</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">rRam3_P_6</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">rRam3_P_7</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">rRam3_P_8</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">readData_1</TD><TD class="left">double</TD><TD class="right">2.681223180424949</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">readData_2</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">readData_3</TD><TD class="left">double</TD><TD class="right">7.268758521015007</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">tg</TD><TD class="left">double</TD><TD class="right">14.131235027018938</TD><TD class="right">507.7659747570758</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">width</TD><TD class="left">double</TD><TD class="right">200</TD><TD class="right">200</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">writeData_1</TD><TD class="left">double</TD><TD class="right">2.681223180424949</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">writeData_2</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">writeData_3</TD><TD class="left">double</TD><TD class="right">7.268758521015007</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">xg</TD><TD class="left">double 1 x 76 </TD><TD class="right">-0.2349265765128</TD><TD class="right">0.2349265765128</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 15)</TD></TR>
+<TR class="b">
+<TD class="left">xxg</TD><TD class="left">double 1 x 93 </TD><TD class="right">0</TD><TD class="right">0.331590459876207</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 15)</TD></TR>
+</TABLE>
+
+</body>
+</html>

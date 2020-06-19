@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fixed-Point Report for PolyExp_pipeline2</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+	body { font-family: monospace; }
+	h2 { font-family: Arial, Helvetica, sans-serif; color: #990000; margin-top: 50px; }
+	table,th,td { border: 1px solid black; }
+	table { margin-top: 30px; }
+	th { align: center; font-weight: bold; }
+	tr.h { background-color: #99CCFF; }
+	tr.a { background-color: #EEEEFF; }
+	tr.b { background-color: #FFFFFF; }
+	tr.c { background-color: #FFA500; }
+	tr.a td, tr.b td { border-style: none; }
+	td.left { text-align: left; }
+	td.right { text-align: right; }
+	td.center { text-align: center; }
+	td.bold { font-weight: bold; }
+	pre { padding: 0px; margin: 0px; }
+	span { font-style: italic; }
+	.code, .code tr, .code th, .code td { border: none; border-collapse: collapse; }
+	.padd { padding-left: 5px; }
+	td.cov, th.cov { width: 50px; height: 20px; text-align: center; font-weight: bold; border-right: 2px solid black; cell-spacing: 0px; }
+	td.cov { vertical-align: top; }
+	td.black { color: #000000; font-weight: bold; padding-top: 4px; }
+	td.white { color: #FFFFFF; font-weight: bold; padding-top: 4px; }
+	.code th { font-weight: bold; border-bottom: 2px solid black; }
+</style>
+</head>
+<body>
+<h3>Generated on  2020-06-19 13:26:10</h3>
+<p>The following table shows fixed point instrumentation results</p>
+<h2>Fixed-Point Report <span>PolyExp_pipeline2<span></h2>
+<TABLE class="code">
+<TR>
+<TH class="cov padd">Simulation Coverage</TH>
+<TH>Code</TH>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>function [data_out_0, data_out_1, data_out_2] = PolyExp_pipeline2( indata_0 ,indata_1 ,indata_2 ,indata_3,...
+																   indata_4 ,indata_5 ,indata_6 ,indata_7,...
+																   indata_8 ,indata_9 ,indata_10,indata_11,...
+																   indata_12,indata_13,indata_14,indata_15,...
+																   int0,int1,int2)
+%--------------------------------------------								
+n = 8;
+%--------------------------------------------
+g    = zeros(1,17);
+xg   = zeros(1,17);
+xxg  = zeros(1,17);
+%--------------------------------------------
+g(1, 1) = 7.425750567660737e-11;  xg(1, 1) = -5.940600454128590e-10; xxg(1, 1) = 4.752480363302872e-09;
+g(1, 2) = 1.357346656654903e-08;  xg(1, 2) = -9.501426596584319e-08; xxg(1, 2) = 6.650998617609023e-07;
+g(1, 3) = 1.238932971502896e-06;  xg(1, 3) = -7.433597829017376e-06; xxg(1, 3) = 4.460158697410425e-05;
+g(1, 4) = 5.646917756715771e-05;  xg(1, 4) = -2.823458878357885e-04; xxg(1, 4) = 0.001411729439179;
+g(1, 5) = 0.001285225836022;      xg(1, 5) = -0.005140903344087;     xxg(1, 5) = 0.020563613376348;
+g(1, 6) = 0.014606906292119;      xg(1, 6) = -0.043820718876357;     xxg(1, 6) = 0.131462156629071;
+g(1, 7) = 0.082897614969052;      xg(1, 7) = -0.165795229938103;     xxg(1, 7) = 0.331590459876207;
+g(1, 8) = 0.234926576512800;      xg(1, 8) = -0.234926576512800;     xxg(1, 8) = 0.234926576512800;
+g(1, 9) = 0.332451909263490;      xg(1, 9) = 0.0;                    xxg(1, 9) = 0.0;
+g(1,10) = 0.234926576512800;      xg(1,10) = 0.234926576512800;      xxg(1,10) = 0.234926576512800;
+g(1,11) = 0.082897614969052;      xg(1,11) = 0.165795229938103;      xxg(1,11) = 0.331590459876207;
+g(1,12) = 0.014606906292119;      xg(1,12) = 0.043820718876357;      xxg(1,12) = 0.131462156629071;
+g(1,13) = 0.001285225836022;      xg(1,13) = 0.005140903344087;      xxg(1,13) = 0.020563613376348;
+g(1,14) = 5.646917756715771e-05;  xg(1,14) = 2.823458878357885e-04;  xxg(1,14) = 0.001411729439179;
+g(1,15) = 1.238932971502896e-06;  xg(1,15) = 7.433597829017376e-06;  xxg(1,15) = 4.460158697410425e-05;
+g(1,16) = 1.357346656654903e-08;  xg(1,16) = 9.501426596584319e-08;  xxg(1,16) = 6.650998617609023e-07;
+g(1,17) = 7.425750567660737e-11;  xg(1,17) = 5.940600454128590e-10;  xxg(1,17) = 4.752480363302872e-09;		 
+%--------------------------------------------
+data_0_buf = indata_0;
+data_1_buf = indata_1;
+data_2_buf = indata_2;
+data_3_buf = indata_3;
+data_4_buf = indata_4;
+data_5_buf = indata_5;
+data_6_buf = indata_6;
+data_7_buf = indata_7;
+data_8_buf = indata_8;
+data_9_buf = indata_9;
+data_10_buf = indata_10;
+data_11_buf = indata_11;
+data_12_buf = indata_12;
+data_13_buf = indata_13;
+data_14_buf = indata_14;
+data_15_buf = indata_15;
+int0_buf = int0;
+int1_buf = int1;
+int2_buf = int2;
+
+for k = 1: n
+	g0 = g(1,k+9);
+	g1 = xg(1,k+9);
+	g2 = xxg(1,k+9);
+	if k == 1
+		srow_0 = data_0_buf;
+		srow_1 = data_8_buf;
+	elseif k == 2
+		srow_0 = data_1_buf;
+		srow_1 = data_9_buf;
+	elseif k == 3
+		srow_0 = data_2_buf;
+		srow_1 = data_10_buf;
+	elseif k == 4
+		srow_0 = data_3_buf;
+		srow_1 = data_11_buf;
+	elseif k == 5
+		srow_0 = data_4_buf;
+		srow_1 = data_12_buf;
+	elseif k == 6
+		srow_0 = data_5_buf;
+		srow_1 = data_13_buf;
+	elseif k == 7
+		srow_0 = data_6_buf;
+		srow_1 = data_14_buf;
+	elseif k == 8
+		srow_0 = data_7_buf;
+		srow_1 = data_15_buf;
+	else
+		srow_0 = 0.0;
+		srow_1 = 0.0;
+	end
+			
+	p = srow_1 + srow_0;
+	q = srow_1 - srow_0;
+
+	outt0 = int0_buf + g0 * p;
+	outt1 = int1_buf + g1 * q;
+	outt2 = int2_buf + g2 * p;
+	%----------------------
+	int0_buf = outt0;
+	int1_buf = outt1;
+	int2_buf = outt2;
+	%----------------------
+end
+data_out_0 = int0_buf;
+data_out_1 = int1_buf;
+data_out_2 = int2_buf;
+end</pre></TD>
+</TR>
+</TABLE>
+<TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th><th>Static Min</th><th>Static Max</th><th>Whole Number</th><th>ProposedType <BR /> (Best For WL = 14)</th></TR><TR class="a">
+<TD class="left">data_0_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">data_10_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">data_11_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">data_12_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">data_13_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">data_14_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">data_15_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">data_1_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">data_2_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">data_3_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">data_4_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">data_5_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">data_6_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">data_7_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">data_8_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">data_9_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">data_out_0</TD><TD class="left">double</TD><TD class="right">2.681223180424949</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">data_out_1</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">data_out_2</TD><TD class="left">double</TD><TD class="right">7.268758521015007</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">g</TD><TD class="left">double 1 x 17 </TD><TD class="right">0</TD><TD class="right">0.33245190926349</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 15)</TD></TR>
+<TR class="a">
+<TD class="left">g0</TD><TD class="left">double</TD><TD class="right">7.425750567660737e-11</TD><TD class="right">0.2349265765128</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 16)</TD></TR>
+<TR class="b">
+<TD class="left">g1</TD><TD class="left">double</TD><TD class="right">5.94060045412859e-10</TD><TD class="right">0.2349265765128</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 16)</TD></TR>
+<TR class="a">
+<TD class="left">g2</TD><TD class="left">double</TD><TD class="right">4.752480363302872e-09</TD><TD class="right">0.331590459876207</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 15)</TD></TR>
+<TR class="b">
+<TD class="left">indata_0</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">indata_1</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">indata_10</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">indata_11</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">indata_12</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">indata_13</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">indata_14</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">indata_15</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">indata_2</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">indata_3</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">indata_4</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">indata_5</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">indata_6</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">indata_7</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">indata_8</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">indata_9</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">int0</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">84.77523686218996</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 7)</TD></TR>
+<TR class="a">
+<TD class="left">int0_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">int1</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 1, 0)</TD></TR>
+<TR class="a">
+<TD class="left">int1_buf</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">int2</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 1, 0)</TD></TR>
+<TR class="a">
+<TD class="left">int2_buf</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="b">
+<TD class="left">k</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="a">
+<TD class="left">n</TD><TD class="left">double</TD><TD class="right">8</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="b">
+<TD class="left">outt0</TD><TD class="left">double</TD><TD class="right">0.9397063060512</TD><TD class="right">254.62131346117678</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 6)</TD></TR>
+<TR class="a">
+<TD class="left">outt1</TD><TD class="left">double</TD><TD class="right">-93.28052340371035</TD><TD class="right">88.92983885400514</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 6)</TD></TR>
+<TR class="b">
+<TD class="left">outt2</TD><TD class="left">double</TD><TD class="right">0.9397063060512</TD><TD class="right">365.7990485632158</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 5)</TD></TR>
+<TR class="a">
+<TD class="left">p</TD><TD class="left">double</TD><TD class="right">4</TD><TD class="right">510</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 9, 0)</TD></TR>
+<TR class="b">
+<TD class="left">q</TD><TD class="left">double</TD><TD class="right">-253</TD><TD class="right">245</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(1, 9, 0)</TD></TR>
+<TR class="a">
+<TD class="left">srow_0</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="b">
+<TD class="left">srow_1</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">255</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 8, 0)</TD></TR>
+<TR class="a">
+<TD class="left">xg</TD><TD class="left">double 1 x 17 </TD><TD class="right">-0.2349265765128</TD><TD class="right">0.2349265765128</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 14, 15)</TD></TR>
+<TR class="b">
+<TD class="left">xxg</TD><TD class="left">double 1 x 17 </TD><TD class="right">0</TD><TD class="right">0.331590459876207</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 14, 15)</TD></TR>
+</TABLE>
+
+</body>
+</html>

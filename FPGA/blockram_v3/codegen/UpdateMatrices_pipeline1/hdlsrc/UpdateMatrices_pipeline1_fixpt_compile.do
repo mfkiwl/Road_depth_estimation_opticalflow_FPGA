@@ -1,0 +1,6 @@
+vlib work
+vcom  UpdateMatrices_pipeline1_fixpt_pkg.vhd
+vcom  SimpleDualPortRAM_generic.vhd
+vcom  UpdateMatrices_pipeline1_fixpt_tc.vhd
+vcom  UpdateMatrices_pipeline1_fixpt_enb_bypass.vhd
+vcom  UpdateMatrices_pipeline1_fixpt.vhd
